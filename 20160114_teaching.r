@@ -102,6 +102,15 @@ x_table[3,3]
 x_table[2]
 edit(x_table)
 
+weight = c(150, 135, 210, 140)
+height = c(65, 61, 70, 65)
+gender = c("Fe","Fe","M","Fe")
+study = data.frame(weight,height,gender) # make the data frame
+study
+study = data.frame(w=weight,h=height,g=gender)
+row.names(study)<-c("Mary","Alice","Bob","Judy")
+study
+
 # 因子(factor)  ← 儲存"類別變數"的內容=============================================|
 
 # 列表組成的元素可以是異質(heterogeneous)物件
@@ -123,15 +132,6 @@ factor_table[[3]][2]
 factor_table[[3]][3]
 factor_table[4]
 factor_table[[4]][1]
-
-weight = c(150, 135, 210, 140)
-height = c(65, 61, 70, 65)
-gender = c("Fe","Fe","M","Fe")
-study = data.frame(weight,height,gender) # make the data frame
-study
-
-study = data.frame(w=weight,h=height,g=gender)
-row.names(study)<-c("Mary","Alice","Bob","Judy")
 
 # ==================================================================================|
 # ===================================== 條件 =======================================|
@@ -204,11 +204,4 @@ Area_of_a_disk(8)
 for(i in 1:100){
   cat("半徑為", i, "時的圓面積 =", Area_of_a_disk(i), "\n")
   }
-
-
-
-
-
-
-
 
